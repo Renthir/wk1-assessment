@@ -10,6 +10,7 @@
 */
 
 //CODE HERE
+let gitDefinition = 'Git is a version control system that uses snapshots of files and a difference calculation to determine changes made to allow quick and light changes to projects, and especially larger ones made by teams.'
 
 //////////////////PROBLEM 2////////////////////
 /*
@@ -18,6 +19,7 @@
 */
 
 //CODE HERE
+let gitHubDefinition = 'GitHub is a third party website that acts as an open server for people to push(upload) their code to for easy access by them and others with access to work said code repositories.'
 
 //////////////////PROBLEM 3////////////////////
 /*
@@ -26,7 +28,7 @@
 */
 
 //CODE HERE
-
+let gitInitDefinition = 'git init: init is short for initial(ize), this command sets up the current directory/folder to be used as a repository, which stores all the versions commited to the repository'
 //////////////////PROBLEM 4////////////////////
 /*
     Create a variable called 'gitCloneDefinition'.  
@@ -34,6 +36,7 @@
 */
 
 //CODE HERE
+let gitCloneDefinition = 'This command clones folders(or the whole repository) from an external repository to the one stored on your computer, allowing you to have up-to-date project code to work on.'
 
 //////////////////PROBLEM 5////////////////////
 /*
@@ -42,7 +45,7 @@
 */
 
 //CODE HERE
-
+let gitStatusDefinition = 'A command that displays the status of the staging area, showing what files have been added and if theyre ready to be committed'
 //////////////////PROBLEM 6////////////////////
 /*
     Create a variable called 'gitAddDefinition'.  
@@ -53,6 +56,7 @@
 */
 
 //CODE HERE
+let gitAddDefinition = 'The command to add files to the staging area, to get them ready to be commited to the repository'
 
 //////////////////PROBLEM 7////////////////////
 /*
@@ -64,7 +68,7 @@
 */
 
 //CODE HERE
-
+let gitCommitDefinition = 'This command will '
 
 //////////////////PROBLEM 8////////////////////
 /*
