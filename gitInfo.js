@@ -57,6 +57,7 @@ let gitStatusDefinition = 'A command that displays the status of the staging are
 
 //CODE HERE
 let gitAddDefinition = 'The command to add files to the staging area, to get them ready to be commited to the repository'
+let gitAddCode = 'git add .    or    git add -A'
 
 //////////////////PROBLEM 7////////////////////
 /*
@@ -68,8 +69,8 @@ let gitAddDefinition = 'The command to add files to the staging area, to get the
 */
 
 //CODE HERE
-let gitCommitDefinition = 'This command will '
-
+let gitCommitDefinition = 'This command will take the snapshot and log it into the repository with the message'
+let gitCommitCode = ' git commit -m "initial commit" '
 //////////////////PROBLEM 8////////////////////
 /*
     Create a variable called 'gitPushDefinition'.  
@@ -77,3 +78,4 @@ let gitCommitDefinition = 'This command will '
 */
 
 //CODE HERE
+let gitPushDefinition = 'This command clones the commits in your repository and pushes them to an external(repo wise) directory or server where a previously designated repository sits.'
