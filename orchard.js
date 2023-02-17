@@ -51,8 +51,20 @@ const pinkPrice = .55
 
 // CODE HERE
 
+//Defined a new array to contain all the orchard's apple fields
+//Used the new array in a for loop to ensure all three fields are taken into account.
+//Inside the for loop, use another for loop to iterate over each field's acres picked and add them to the totalAcres sum.
 
+let appleFarms = [fujiAcres, galaAcres, pinkAcres]
+let totalAcres = 0
 
+for (let i = 0; i < appleFarms.length; i++) {
+    for (let a = 0; a < appleFarms[i].length; a++){
+        totalAcres += appleFarms[i][a]
+    }
+}
+
+console.log(totalAcres)
 
 
 // PROBLEM 2
@@ -69,8 +81,10 @@ const pinkPrice = .55
 
 // CODE HERE
 
+//using .length function to find the length of the arrays and sum them together to calculate the average.
+let averageDailyAcres = totalAcres / (fujiAcres.length + galaAcres.length + pinkAcres.length)
 
-
+console.log(averageDailyAcres)
 
 
 // PROBLEM 3
@@ -107,7 +121,13 @@ let days = 0
 
 // CODE HERE
 
+//Calculating an approximate number of days it will take to finish picking all the acres of apples
+while (acresLeft > 0) {
+    days += 1
+    acresLeft -= averageDailyAcres
+}
 
+console.log(days)
 
 // PROBLEM 4
 
@@ -135,13 +155,22 @@ let days = 0
 
 // CODE HERE
 
-// let fujiTons =
-// let galaTons =
-// let pinkTons =
+//using a similar method to the totalAcres, we make an array of arrays to keep all the numbers in one block. 
+//We access the field we want to pull from, then it's individual numbers, and for each number we multiply it by 6.5 and push it to the end of the new field's array
+let fujiTons = []
+let galaTons = []
+let pinkTons = []
+let fieldTons = [fujiTons, galaTons, pinkTons]
 
+for (let i = 0; i < appleFarms.length; i++) {
+    for (let a = 0; a < appleFarms[i].length; a++){
+        fieldTons[i].push(appleFarms[i][a] * 6.5)
+    }
+}
 
-
-
+console.log(fujiTons)
+console.log(galaTons)
+console.log(pinkTons)
 
 
 // PROBLEM 5
@@ -162,13 +191,24 @@ let days = 0
 
 // CODE HERE 
 
-// let fujiPounds =
-// let galaPounds =
-// let pinkPounds =
+let fujiPounds = 0
+let galaPounds = 0
+let pinkPounds = 0
 
+// using a more simple but longer method, we iterate over each field array's tonnage and multiply it and add it to the field's pound sum
+for (let i = 0; i < fujiTons.length; i++) {
+    fujiPounds += fujiTons[i] * 2000
+}
+for (let i = 0; i < galaTons.length; i++) {
+    galaPounds += galaTons[i] * 2000
+}
+for (let i = 0; i < pinkTons.length; i++) {
+    pinkPounds += pinkTons[i] * 2000
+}
 
-
-
+console.log(fujiPounds)
+console.log(galaPounds)
+console.log(pinkPounds)
 
 
 // PROBLEM 6
@@ -188,14 +228,15 @@ let days = 0
 */
 
 // CODE HERE
+//Multiplying the how many pounds of apples there are by the price per pound
+let fujiProfit = fujiPounds * fujiPrice
+let galaProfit = galaPounds * fujiPrice
+let pinkProfit = pinkPounds * pinkPrice
 
-// let fujiProfit =
-// let galaProfit =
-// let pinkProfit =
-
-
-
-
+console.log("---")
+console.log(fujiProfit)
+console.log(galaProfit)
+console.log(pinkProfit)
 
 
 // PROBLEM 7
@@ -209,3 +250,7 @@ let days = 0
 */
 
 // CODE HERE
+//I think this is technically revenue, not profit, as we didn't deduct our expenses
+let totalProfit = fujiProfit + galaProfit + pinkProfit
+console.log("---")
+console.log(totalProfit)
